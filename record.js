@@ -17,8 +17,8 @@
 
     app.api.call('GET', url, null, {
     success: (res) => {
-        console.log('API Response : ',res.message);
-        this.model.set('summary_2_c', res.message);
+        console.log('API Response : ',res);
+        this.model.set('summary_2_c', res.data.first_name);
          if (!this.disposed) {
           this.render();
        }  
